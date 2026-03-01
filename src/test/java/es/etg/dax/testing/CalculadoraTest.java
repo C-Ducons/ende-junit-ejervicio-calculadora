@@ -46,39 +46,8 @@ public class CalculadoraTest {
 
     }
 
-    // Esta prueba comprueba que al dividir por cero se lanza una excepción
-    // controlada: OperacionNoValidaException
-    @Test
-    @DisplayName("Probar la división por cero")
-    void dividirPorZeroException() {
-        var ex = assertThrows(OperacionNoValidaException.class, () -> Calculadora.dividir(4, 0),
-                "La división por cero no está permitida");
-        assertEquals(OperacionNoValidaException.MSG, ex.getMessage());
-        
-        }
-        @Test
-    @DisplayName("Caso 1: División exacta")
-    void testDividirExacto() throws OperacionNoValidaException {
-        assertEquals(5, Calculadora.dividir(10, 2), "La división de 10 entre 2 debe ser 5");
-    }
-
-    @Test
-    @DisplayName("Caso 2: División entera con pérdida de decimales")
-    void dividirNormal() throws OperacionNoValidaException {
-        assertEquals(2, Calculadora.dividir(5, 2), "La división entera de 5 entre 2 debe dar 2");
-    }
-
-    @Test
-    @DisplayName("Caso 3: Dividendo igual a cero")
-    void testDividirCero() throws OperacionNoValidaException {
-        assertEquals(0, Calculadora.dividir(0, 5), "0 dividido entre cualquier número debe ser 0");
-    }
-
-    @Test
-    @DisplayName("Caso 4: División con números negativos")
-    void testDividirNegativos() throws OperacionNoValidaException {
-        assertEquals(-5, Calculadora.dividir(10, -2), "La división de 10 entre -2 debe dar -5");
-    }
+    // Pendiente de pruebas de división (actualmente en fase de caja negra).
+    
 }
   
     

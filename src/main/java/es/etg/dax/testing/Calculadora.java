@@ -17,12 +17,7 @@ public class Calculadora {
         return a*b;
     }
 
-    public static int dividir(int a, int b) throws OperacionNoValidaException{
-        if (b==0)
-            throw new OperacionNoValidaException();
-        else
-            return a/b;
-    }
+ // Pendiente de pruebas de división (actualmente en fase de caja negra).
 
 }
 
